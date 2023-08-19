@@ -1,0 +1,66 @@
+body, .hero, .logo {
+    margin: 0;
+}
+
+.navbar, .header {
+    padding: 40px 100px;
+    background-color: #9FB8ED;
+}
+
+.navbar, .links {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.links {
+    flex: 1;
+}
+
+.links > * {
+    text-decoration: none;
+    color: white;
+}
+
+.hero, .logo {
+    margin: 0;
+    color: rgba(0, 0, 0, 0.71);
+    font-family: 'Poppins', sans-serif;
+    line-height: 120%;
+    font-weight: 800;
+}
+
+.text, .links, .download-btn {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+.download-btn {
+    border: none;
+    background-color: #F25F5C;
+    padding: 10px 25px;
+    border-radius: 15px;
+    color: black;
+    max-width: 200px;
+}
+
+.logo {
+    flex: 2;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.header {
+    display: flex;
+    gap: 25%;
+}
+
+.avatar {
+    border: 8px solid white;
+    border-radius: 50%;
+}
