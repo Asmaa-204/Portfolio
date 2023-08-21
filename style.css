@@ -1,13 +1,68 @@
-body, .hero, .logo {
-    margin: 0;
+/* Global Styling */
+
+
+
+
+
+:root{
+     --var : value;
 }
 
-.navbar, .header {
-    padding: 40px 100px;
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style-type: none;
+}
+
+
+.container{
+    width: 85%;
+    margin: 0 auto;
+}
+
+
+/* End Global Styline */
+
+
+
+
+
+
+
+
+
+
+
+/* 
+
+
+/* Start Heading */
+
+.navbar, .header{
     background-color: #9FB8ED;
 }
 
-.navbar, .links {
+
+
+.navbar .container, .header .container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.navbar .container, .links {
     display: flex;
     justify-content: space-between;
     gap: 10px;
@@ -18,29 +73,28 @@ body, .hero, .logo {
 }
 
 .links > * {
-    text-decoration: none;
     color: white;
 }
 
 .hero, .logo {
     margin: 0;
     color: rgba(0, 0, 0, 0.71);
-    font-family: 'Poppins', sans-serif;
     line-height: 120%;
     font-weight: 800;
 }
 
 .text, .links, .download-btn {
-    font-family: 'Poppins', sans-serif;
     color: white;
 }
 
 .download-btn {
     border: none;
-    background-color: #F25F5C;
-    padding: 10px 25px;
     border-radius: 15px;
+
+    background-color: #F25F5C;
     color: black;
+
+    padding: 10px 25px;
     max-width: 200px;
 }
 
@@ -55,7 +109,7 @@ body, .hero, .logo {
 }
 
 
-.header {
+.header .container{
     display: flex;
     gap: 25%;
 }
@@ -64,3 +118,187 @@ body, .hero, .logo {
     border: 8px solid white;
     border-radius: 50%;
 }
+
+/* End Heading */
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Start Services */
+
+.services{
+    position: relative;
+    border-bottom: 1px solid black;
+}
+
+.services .abstract{
+    position: absolute;
+    z-index: 1;
+}
+
+.halzona{
+    left: 5vw;
+    top: 5vw;
+}
+
+.halzona img{
+    width: calc(3rem + 5vw);
+}
+
+.zigzag{
+    right: 5vw;
+    top: -5vw;
+}
+
+.zigzag img{
+    width: calc(2rem + 5vw);
+}
+
+
+
+
+.services > .container{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    gap: 0.2rem;
+}
+
+.services .container > h2{
+    color: #4E51D7;
+}
+
+.services .container > h1{
+    font-weight: 800;
+}
+
+.services > .container > .servs{
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(250px,1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.services .container .servs .serv-card{
+    padding: 1.5rem;
+    border-radius: 60px;
+    border: 1px solid black;
+} 
+
+
+.services .container .servs .serv-card:nth-child(1){
+    background-color: #F8F8F8;
+}
+
+.services .container .servs .serv-card:nth-child(3){
+    background-color: #F8F8F8;
+}
+
+.services .container .servs .serv-card:nth-child(2){
+    background-color: #9FB8ED;
+}
+
+
+
+.services .serv-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.services .serv-card > h3{
+    font-size: 1rem;
+    text-align: center;
+}
+
+
+/* End Services */
+
+
+
+/* Start About Section */
+
+.about .container{
+    padding-top: 60px;
+    padding-bottom: 80px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.about .container > h2{
+    color: #4E51D7;
+}
+
+.about .container > p{
+    width: 80%;
+}
+
+.about .container .techs{
+    align-self: center;
+    margin-top: 30px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.slider-btn{
+    background-color: blue;
+    color: white;
+    font-size: 1rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 5px;
+    z-index: 2;
+}
+
+
+.next{
+    position: absolute;
+    right: -10%;
+    top: 40%;
+}
+
+.prev{
+    position: absolute;
+    left: -10%;
+    top: 40%;
+    font-size: 1rem;
+}
+
+.about .container .techs .techs-slider{
+    display: flex;
+    gap: 3rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+.about .container .techs .techs-slider>img{
+    width: 5rem;
+}
+
+
+
+/* End About Section */
