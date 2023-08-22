@@ -334,6 +334,7 @@ ul{
     display: flex;
     flex-direction: column;
     gap: 3rem;
+
 }
 
 .about .container > h2{
@@ -350,6 +351,8 @@ ul{
     position: relative;
     display: flex;
     justify-content: center;
+
+    width: 100%;
 }
 
 .slider-btn{
@@ -378,15 +381,18 @@ ul{
 
 .about .container .techs .techs-slider{
     display: flex;
-    gap: 3rem;
-    width: 100%;
+    gap: 1rem;
+    width: 80%;
     overflow: hidden;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
-.about .container .techs .techs-slider>img{
-    width: 5rem;
-}
 
+.techs-slider > img{
+    width: 2rem;
+}
 
 
 /* End About Section */
@@ -418,6 +424,101 @@ ul{
 }
 /*End Projects section*/
 
+
+/* Start Testmonial Sections */
+
+.testmonials {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background:  #9FB8ED;
+}
+
+.testmonials .container{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.testmonials .container h1{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    width: 50%;
+}
+
+.testmonials .reviews{
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(300px,1fr));
+    gap: 1rem;
+}
+
+.testmonials .container .review{
+
+    flex-basis: 250px;
+    padding: 2rem;
+    border: 1px solid black;
+    border-radius: 20px;
+
+    background-color: white;
+    transition: all 0.2s ease-in-out;
+}
+
+.review .id{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 2rem;
+    gap: .5rem;
+}
+
+.review p{
+    font-size: 15px;
+}
+
+
+.review img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.far-active{
+    transform-origin: center top;
+    transform: perspective(10000px) translateZ(-500px);
+    opacity: 0.5;
+}
+
+.near-active{
+    transform-origin: center top;
+    transform: perspective(10000px) translateZ(-500px);
+    opacity: 0.8;
+}
+
+.active{
+    transform-origin: center top;
+    transform: perspective(10000px) translateZ(1000px);
+
+    -webkit-box-shadow: 25px 23px 50px 0px rgba(0,0,0,0.44);
+    -moz-box-shadow: 25px 23px 50px 0px rgba(0,0,0,0.44);
+    box-shadow: 25px 23px 50px 0px rgba(0,0,0,0.44);
+
+    z-index: 1;
+}
+
+
+.btns{
+    align-self: flex-end;
+}
+
+.btns div{
+    display: inline;
+}
+
+.btns div i{
+    font-size: 2rem;
+}
+
+/* End Testmonial Sections */
 
 /*Start Contact section*/
 
