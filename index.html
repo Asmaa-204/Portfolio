@@ -92,6 +92,12 @@
 
     <!-- Start About -->
     <div class="about" id="about">
+        <div class="megaphone">
+            <img src="assests/icons/megaphone.svg">
+        </div>
+        <div class="award">
+            <img src="assests/icons/award.svg">
+        </div>
         <div class="container">
             <h2>ABOUT ME</h2>
             <p>
@@ -224,20 +230,30 @@
             <fieldset>
                 <legend>What services are you interested in?</legend>
 
-                <input type="radio" name="service" id="frontend" value="frontend">
-                <label for="frontend">Front End</label>
+                <div>
+                    <input type="radio" name="service" id="frontend" value="frontend">
+                    <label for="frontend">Front End</label>
+                </div>
 
-                <input type="radio" name="service" id="backend" value="backend">
-                <label for="backend">Backend</label>
+                <div>
+                    <input type="radio" name="service" id="backend" value="backend">
+                    <label for="backend">Backend</label>
+                </div>
 
-                <input type="radio" name="service" id="app" value="app">
-                <label for="app">App</label>
+                <div>
+                    <input type="radio" name="service" id="app" value="app">
+                    <label for="app">App</label>
+                </div>
 
-                <input type="radio" name="service" id="desktop" value="desktop">
-                <label for="desktop">Desktop</label>
+                <div>
+                    <input type="radio" name="service" id="desktop" value="desktop">
+                    <label for="desktop">Desktop</label>
+                </div>
 
-                <input type="radio" name="service" id="other" value="other">
-                <label for="other">Not sure yet</label>
+                <div>
+                    <input type="radio" name="service" id="other" value="other">
+                    <label for="other">Not sure yet</label>
+                </div>
             </fieldset>
 
             <textarea name="message" id="message" cols="30" rows="10" placeholder="Say hi!" required></textarea>

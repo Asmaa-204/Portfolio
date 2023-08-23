@@ -2,6 +2,10 @@
 
 
 const UI = (() => {
+
+    //Header
+    const downloadBtn = document.querySelector(".download-btn");
+
     // Selecting Items
     const contactBtn = document.querySelector(".contact-btn");
 
@@ -38,7 +42,8 @@ const UI = (() => {
         messageFeed,
         submitFeed,
         closeBtn,
-        contactBtn
+        contactBtn,
+        downloadBtn
     }
 })();
 
@@ -60,6 +65,24 @@ const menu = document.querySelector(".hamburger");
 menu.addEventListener("click", () => {
    links.classList.toggle("hide")
 })
+
+
+UI.downloadBtn.addEventListener('click' , () => {
+    const download = document.createElement('a');
+
+    download.href = './assets/abstract/halzona.svg';
+    download.download = 'halzona.svg';
+    download.style.display = 'none'
+
+    document.body.appendChild(download)
+
+    download.click();
+
+    console.log('started downloading..')
+
+    document.body.removeChild(download);
+})
+
 
 
 // Testmonials
@@ -228,12 +251,23 @@ const Form = (() => {
 
 
 
-UI.contactBtn.addEventListener('click' , () => {
-    UI.form.classList.remove('hidden-form');
-    UI.form.classList.add('visible-form');
-});
+
+
 
 UI.closeBtn.addEventListener('click' , () => {
     UI.form.classList.remove('visible-form');
     UI.form.classList.add('hidden-form');
 });
+
+document.addEventListener('click' , (e) => {
+    if(e.target === UI.contactBtn)
+    {
+        UI.form.classList.remove('hidden-form');
+        UI.form.classList.add('visible-form');
+    }
+    else if(e.target !== UI.form && UI.form.classList.contains('visible-form'))
+    {
+        UI.form.classList.remove('visible-form');
+        UI.form.classList.add('hidden-form');
+    }
+})
