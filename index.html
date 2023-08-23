@@ -10,6 +10,7 @@
 
     <!-- JAVASCRIOT -->
     <script src="https://kit.fontawesome.com/9f4c644352.js" crossorigin="anonymous"></script>
+    <script src="https://smtpjs.com/v3/smtp.js" defer></script>
     <script src="./index.js" defer></script>
 
     <!-- Styling Document -->
@@ -87,6 +88,9 @@
         </div>
     </div>
 
+    <!-- End Services -->
+
+    <!-- Start About -->
     <div class="about" id="about">
         <div class="container">
             <h2>ABOUT ME</h2>
@@ -107,10 +111,8 @@
             </div>
         </div>
     </div>
+    <!-- End About -->
 
-
-
-    <!-- End Services -->
 
     <!-- Start Projects     
              <div class="projects">
@@ -195,7 +197,58 @@
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi doloremque quas sunt adipisci iure voluptas.</p>
             <button class="contact-btn shadow">Contact</button>
         </div>
-    </div>   
+    </div>
+    
+    <div class="form hidden-form">
+        <div class="close">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="intro">
+            <div class="avatar">
+                <img src="assests/avatar.png" alt="avatar" width="50px" height="50px">
+            </div>
+            <div class="intro-text">
+                <h1>Contact Form</h1>
+                <p>Wow, you made it to the form! That's great for both of us. I look forward to hearing from you!</p>
+                <h3>- Shehab Khaled</h3>
+            </div>
+        </div>
+        <form action="get" novalidate>
+
+            <input type="text" name="name" id="name" placeholder="Name" required>
+            <span class="name feedback"></span>
+            
+            <input type="email" name="email" id="email" placeholder="Email" required>
+            <span class="email feedback"></span>
+
+            <fieldset>
+                <legend>What services are you interested in?</legend>
+
+                <input type="radio" name="service" id="frontend" value="frontend">
+                <label for="frontend">Front End</label>
+
+                <input type="radio" name="service" id="backend" value="backend">
+                <label for="backend">Backend</label>
+
+                <input type="radio" name="service" id="app" value="app">
+                <label for="app">App</label>
+
+                <input type="radio" name="service" id="desktop" value="desktop">
+                <label for="desktop">Desktop</label>
+
+                <input type="radio" name="service" id="other" value="other">
+                <label for="other">Not sure yet</label>
+            </fieldset>
+
+            <textarea name="message" id="message" cols="30" rows="10" placeholder="Say hi!" required></textarea>
+            <span class="message feedback"></span>
+
+            <button type="submit" class="submit-btn"> SUBMIT </button>
+            <span class="submit feedback"></span>
+
+        </form>
+    </div>
+
     <!-- End Contact -->
 
 
