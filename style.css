@@ -2,9 +2,10 @@
 
 
 
-/* html {
-    scroll-padding-top: 70px;
-} */
+html {
+    scroll-padding-top: 65px;
+    scroll-behavior: smooth;
+}
 
 :root{
      --var : value;
@@ -205,6 +206,10 @@ ul{
     .l-avatar {
         display: none;
     }
+
+    .active {
+        display: flex;
+    }
 }
 
 /* End Heading */
@@ -230,7 +235,6 @@ ul{
 
 .services{
     position: relative;
-    border-bottom: 1px solid black;
 }
 
 .services .abstract{
@@ -289,21 +293,19 @@ ul{
 .services .container .servs .serv-card{
     padding: 1.5rem;
     border-radius: 60px;
-    border: 1px solid black;
 } 
 
 
-.services .container .servs .serv-card:nth-child(1){
+.services .container .servs .serv-card:nth-child(odd){
     background-color: #F8F8F8;
+    border: 1px solid #9FB8ED;
 }
 
-.services .container .servs .serv-card:nth-child(3){
-    background-color: #F8F8F8;
-}
-
-.services .container .servs .serv-card:nth-child(2){
+.services .container .servs .serv-card:nth-child(even){
     background-color: #9FB8ED;
+    color: white;
 }
+
 
 
 
@@ -330,7 +332,11 @@ ul{
 
 .about{
     position: relative;
+    background: rgb(191,184,218);
+    background: rgb(191,184,218);
+    background: linear-gradient(196deg, rgba(191, 184, 218, 0.596) 0%, rgba(165, 179, 216, 0.61) 45%, rgba(132, 173, 214, 0.493) 50%, rgba(159, 178, 216, 0.315) 86%);
 }
+
 
 .megaphone{
     position: absolute;
@@ -488,14 +494,22 @@ ul{
 
 /*Start Projects section*/
 
+.projects .container h2 {
+    color: #4E51D7;
+}
+
 .projects .container {
     text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    max-width: 70%;
 }
 
 .buttons {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    margin: 2rem;
 }
 
 .projects-btn {
@@ -505,12 +519,79 @@ ul{
     border-radius: 10px;
     font-size: 1rem;
 }
-.projects-btn:first-child {
-    background: linear-gradient(147deg, #9FB8ED 0%, rgba(79, 112, 181, 0.79) 100%);
-    color: white;
-    /* background-color: linear-gradient(90deg, #9563C4 2.60%, #98A0F0 58.33%, rgba(159, 184, 237, 0.75) 100%); */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(200px,1fr));
+    /* border: 2px solid #4E51D7; */
+    gap: 2rem;
+}
+.project {
+    /* border: 1px solid #4ec7d7; */
+    border-radius: 20px;
+    max-width: 100%;    
+}
+
+.project:nth-child(even) {
+    border: 2px solid #E1E9FB;
+}
+
+.project:nth-child(odd) {
+    background: linear-gradient(176deg, #E1E9FB 0%, #AEBBD9 100%);
+    backdrop-filter: blur(4px);
+}
+
+.project img {
+    vertical-align: middle;
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin: 1rem;
+}
+
+.All-btn {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .buttons {
+        position: relative;
+    }
+    .All-btn {
+        display: block;
+        width: 80%;
+        z-index: 100;
+    }
+    .dropdown-btns {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        z-index: 100;
+        top: 2.5rem;
+        width: 80%;
+        display: none;
+        /* border-radius: 10px; */
+    }
+    .dropdown-btns button {
+        border-radius: 0%;
+        background-color: rgba(0, 0, 0, 0.829);
+        color: white;
+    }
+
+    .active {
+        display: flex;
+    }
+
 }
 /*End Projects section*/
+
 
 
 /* Start Testmonial Sections */
@@ -931,7 +1012,6 @@ ul{
         display: flex;
         flex-direction: column;
     }
-
 }
 
 /* End Form  */
@@ -1015,3 +1095,50 @@ hr {
     }
 } */
 /*End Footer section*/
+
+
+button:hover {
+    background-color: #5d6c8b;
+}
+
+  a {
+    position: relative;
+  }
+  
+  a::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      border-radius: 2px;
+      background:  linear-gradient(
+        to right,
+        #9967ce,
+        #9fb2d8);
+      bottom: 0;
+      left: 0;
+      transform-origin: right;
+      transform: scaleX(0);
+      transition: transform .3s ease-in-out;
+    }
+  
+  a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+
+  a:hover {
+    font-size: larger;
+  }
+
+.hamburger:hover {
+    color: rgb(71, 71, 71);
+    cursor: pointer;
+    
+}
+
+.All-btn:active, .contact-btn:active {
+    box-shadow: 0 5px linear-gradient(90deg, #9563C4 0%, #B497ED 52.60%, #9FB8ED 100%);
+    transform: translateY(4px);
+    /* font-size: larger; */
+  }
