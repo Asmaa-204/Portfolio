@@ -50,30 +50,35 @@ const UI = (() => {
 
 
 // Header
-
-const navbar = document.querySelector(".navbar .container");
+const navbar = document.querySelector(".navbar");
+const navbarContainer = document.querySelector(".navbar .container");
 const links = document.querySelector(".links");
 const menu = document.querySelector(".hamburger");
+const tags = document.querySelectorAll(".link");
 
 window.addEventListener("scroll", () => {
    if(window.scrollY > 40) {
-      navbar.style.padding = "20px 0";
-      navbar.style.maxHeight = "40px";
+        navbarContainer.style.padding = "20px 0";
+        navbarContainer.style.maxHeight = "40px";
+        navbar.classList.add("shade");
    }
-   else
-      navbar.style.padding = "40px 0";
-
+   else {
+        navbarContainer.style.padding = "40px 0";
+        navbar.classList.remove("shade");
+   }
 });
 
 menu.addEventListener("click", () => {
-   links.classList.toggle("active")
+   links.classList.toggle("show")
 })
 
-// links.children.forEach(link => {
-//    link.addEventListener("click", ()=> {
-//       link.classList.toggle("active");
-//    })
-// });
+tags.forEach(tag => {
+   tag.addEventListener("click", () => {
+      setTimeout(() => {
+        links.classList.toggle("show");
+      },200);
+   })
+});
 
 
 
@@ -99,14 +104,14 @@ const dropDown = document.querySelector(".dropdown-btns");
 const dropDownBtns = document.querySelectorAll(".dropdown-btns *");
 
 allBtn.addEventListener("click", () => {
-   dropDown.classList.toggle("active");
+   dropDown.classList.toggle("show");
 })
 
 dropDownBtns.forEach(button => {
    button.addEventListener("click", () => {
       const allBtnContent = allBtn.innerHTML; 
       allBtn.innerHTML = `${button.innerHTML}`;
-      dropDown.classList.toggle("active");
+      dropDown.classList.toggle("show");
    })
 });
 
@@ -315,3 +320,57 @@ document.addEventListener('click' , (e) => {
         UI.form.classList.add('hidden-form');
     }
 })
+
+
+/*scroll animation effects*/
+const observer = new IntersectionObserver((entries => {
+    entries.forEach(entry => {
+        console.log(entry);
+        if (entry.isIntersecting) {
+            entry.target.classList.add("animate-scrolling");
+        } else {
+            entry.target.classList.remove("animate-scrolling");
+        }
+    });
+}))
+
+const observer2 = new IntersectionObserver((entries => {
+    entries.forEach(entry => {
+        console.log(entry);
+        if (entry.isIntersecting) {
+            entry.target.classList.add("sliding");
+            setTimeout(() => {
+                entry.target.classList.remove("sliding");
+            },1000)
+        }
+    });
+}))
+
+const observer3 = new IntersectionObserver((entries => {
+    entries.forEach(entry => {
+        console.log(entry);
+        if (entry.isIntersecting) {
+            entry.target.classList.add("reverse-sliding");
+        }  setTimeout(() => {
+            entry.target.classList.remove("reverse-sliding");
+        },1000)
+    });
+}))
+
+
+const hiddenElements = document.querySelectorAll(".hidden");
+const slide = document.querySelectorAll(".slide");
+const revSlide = document.querySelectorAll(".rev-slide");
+
+hiddenElements.forEach(element => {
+    observer.observe(element);
+});
+
+slide.forEach(element => {
+    observer2.observe(element);
+});
+
+revSlide.forEach(element => {
+    observer3.observe(element);
+});
+

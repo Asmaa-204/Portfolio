@@ -31,11 +31,11 @@
             </div>
             <h2 class="logo">logo</h2>
             <div class="links">
-                <a href="#">Home</a>
-                <a href="#about">About</a>
-                <a href="#services">Services</a>
-                <a href="#">Portfolio</a>
-                <a href="#contact">Contact</a>
+                <a class="link" href="#">Home</a>
+                <a class="link" href="#about">About</a>
+                <a class="link" href="#services">Services</a>
+                <a class="link" href="#projects">Portfolio</a>
+                <a class="link" href="#contact">Contact</a>
             </div>
             <div class="hamburger">
                 <i class="fa-solid fa-bars fa-xl"></i>
@@ -44,8 +44,8 @@
     </div>
     <div class="header">
         <div class="container">
-            <div class="text">
-                <h1 class="hero">Hello, I'm Name Name A Computer Engineer</h1>
+            <div class="text hidden">
+                <h1 class="hero slide">Hello, I'm Name Name A Computer Engineer</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum ipsam, commodi delectus recusandae repellendus reprehenderit!</p>
                 <button class="download-btn">Download CV</button>
             </div>
@@ -106,13 +106,13 @@
             </p>
             <div class="techs">
                 <div class="techs-slider">
-                    <img src="assests/techs/C++.svg" alt="C++" class="cpp">
-                    <img src="assests/techs/html.svg" alt="HTML" class="html">
-                    <img src="assests/techs/css.svg" alt="css" class="css">
-                    <img src="assests/techs/JavaScript.svg" alt="JavaScript" class="js">
-                    <img src="assests/techs/React.svg" alt="React" class="react">
-                    <img src="assests/techs/NodeJs.svg" alt="NodeJs" class="node">
-                    <img src="assests/techs/git.svg" alt="gits" class="git">
+                    <img src="assests/techs/C++.svg" alt="C++" class="cpp slide">
+                    <img src="assests/techs/html.svg" alt="HTML" class="html slide">
+                    <img src="assests/techs/css.svg" alt="css" class="css slide">
+                    <img src="assests/techs/JavaScript.svg" alt="JavaScript" class="js rev-slide">
+                    <img src="assests/techs/React.svg" alt="React" class="react rev-slide">
+                    <img src="assests/techs/NodeJs.svg" alt="NodeJs" class="node rev-slide">
+                    <img src="assests/techs/git.svg" alt="gits" class="git rev-slide">
                 </div>
             </div>
         </div>
@@ -120,14 +120,14 @@
     <!-- End About -->
 
     <!-- Start Projects -->    
-        <div class="projects">
+        <div class="projects" id="projects">
             <div class="container">
                 <h2>PROJECTS</h2>
                 <h1>Engineering Projects</h1>
                 <div class="buttons">
-                    <button  class="projects-btn All-btn">ِِِAll</button>
+                    <button  class="projects-btn All-btn">All</button>
                     <div class="dropdown-btns">
-                        <button  data-cat=".All"  class="projects-btn">ِِِAll</button>
+                        <button  data-cat=".All"  class="projects-btn">All</button>
                         <button  data-cat=".GUI" class="projects-btn">GUI</button>
                         <button  data-cat=".CLI" class="projects-btn">CLI</button>
                         <button  data-cat=".FrontEnd" class="projects-btn">Front End</button>
@@ -185,7 +185,7 @@
                 <div class="next-btn"><i class="fa-regular fa-circle-right"></i></div>
             </div>
             <div class="reviews">
-                <div class="review active">
+                <div class="review active rev-slide">
                     <div class="id">
                         <img src="assests/avatar.png" alt="person">
                         <div class="personal">
@@ -199,7 +199,7 @@
                         amet consectetur adipisicing elit. 
                     </p>
                 </div>
-                <div class="review near-active">
+                <div class="review near-active slide">
                     <div class="id">
                         <img src="assests/avatar.png" alt="person">
                         <div class="personal">
@@ -212,7 +212,7 @@
                         Quisquam, voluptatum. Quisquam, voluptatum. Lorem ipsum dolor sit, 
                     </p>
                 </div>
-                <div class="review far-active">
+                <div class="review far-active rev-slide">
                     <div class="id">
                         <img src="assests/avatar.png" alt="person">
                         <div class="personal">
@@ -236,9 +236,9 @@
     <!-- Start Contact --> 
     <div class="contact" id="contact">
         <div class="container">
-            <h1>Interested In My Work!</h1>
-            <h1>Let's Talk</h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi doloremque quas sunt adipisci iure voluptas.</p>
+            <h1 class="slide">Interested In My Work!</h1>
+            <h1 class="slide">Let's Talk</h1>
+            <p class="rev-slide">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi doloremque quas sunt adipisci iure voluptas.</p>
             <button class="contact-btn shadow">Contact</button>
         </div>
     </div>
