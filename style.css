@@ -114,15 +114,34 @@ ul{
 }
 
 .download-btn {
-    border: none;
+
     border-radius: 15px;
-
-    background-color: #F25F5C;
-    color: black;
-
-    padding: 10px 25px;
+    font-weight: bold;
     max-width: 200px;
+    position:relative;
+    color:#ecf0f1;
+    border:solid 1px #f39c12;
+    background:#e67e22;
+    text-align:center;
+    padding: 10px 25px;
+  
+    -webkit-transition: all 0.1s;
+    -moz-transition: all 0.1s;
+    transition: all 0.1s;
+  
+    -webkit-box-shadow: 0px 6px 0px #d35400;
+    -moz-box-shadow: 0px 6px 0px #d35400;
+    box-shadow: 0px 6px 0px #d35400;
 }
+
+.download-btn:active{
+  -webkit-box-shadow: 0px 2px 0px #d35400;
+  -moz-box-shadow: 0px 2px 0px #d35400;
+  box-shadow: 0px 2px 0px #d35400;
+  position:relative;
+  top:4px;
+}
+
 
 .text {
     display: flex;
@@ -546,10 +565,12 @@ ul{
     #9563C4 2.60%, #98A0F0 58.33%,
     rgba(159, 184, 237, 0.75) 100%);
     border: none;
-    padding: 10px 30px;
+    /* padding: 10px 30px; */
     position: relative;
     cursor: pointer;
 }
+
+
 
 .shade {
     box-shadow: 0px 10px 30px -10px  #98A0F0;

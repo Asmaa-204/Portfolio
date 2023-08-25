@@ -314,7 +314,7 @@ document.addEventListener('click' , (e) => {
         UI.form.classList.remove('hidden-form');
         UI.form.classList.add('visible-form');
     }
-    else if(e.target !== UI.form && UI.form.classList.contains('visible-form'))
+    else if(!UI.form.contains(e.target) && UI.form.classList.contains('visible-form'))
     {
         UI.form.classList.remove('visible-form');
         UI.form.classList.add('hidden-form');
