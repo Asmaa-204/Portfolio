@@ -322,55 +322,55 @@ document.addEventListener('click' , (e) => {
 })
 
 
-/*scroll animation effects*/
-const observer = new IntersectionObserver((entries => {
-    entries.forEach(entry => {
-        console.log(entry);
-        if (entry.isIntersecting) {
-            entry.target.classList.add("animate-scrolling");
-        } else {
-            entry.target.classList.remove("animate-scrolling");
-        }
-    });
-}))
+// /*scroll animation effects*/
+// const observer = new IntersectionObserver((entries => {
+//     entries.forEach(entry => {
+//         console.log(entry);
+//         if (entry.isIntersecting) {
+//             entry.target.classList.add("animate-scrolling");
+//         } else {
+//             entry.target.classList.remove("animate-scrolling");
+//         }
+//     });
+// }))
 
-const observer2 = new IntersectionObserver((entries => {
-    entries.forEach(entry => {
-        console.log(entry);
-        if (entry.isIntersecting) {
-            entry.target.classList.add("sliding");
-            setTimeout(() => {
-                entry.target.classList.remove("sliding");
-            },1000)
-        }
-    });
-}))
+// const observer2 = new IntersectionObserver((entries => {
+//     entries.forEach(entry => {
+//         console.log(entry);
+//         if (entry.isIntersecting) {
+//             entry.target.classList.add("sliding");
+//             setTimeout(() => {
+//                 entry.target.classList.remove("sliding");
+//             },500)
+//         }
+//     });
+// }))
 
-const observer3 = new IntersectionObserver((entries => {
-    entries.forEach(entry => {
-        console.log(entry);
-        if (entry.isIntersecting) {
-            entry.target.classList.add("reverse-sliding");
-        }  setTimeout(() => {
-            entry.target.classList.remove("reverse-sliding");
-        },1000)
-    });
-}))
+// const observer3 = new IntersectionObserver((entries => {
+//     entries.forEach(entry => {
+//         console.log(entry);
+//         if (entry.isIntersecting) {
+//             entry.target.classList.add("reverse-sliding");
+//         }  setTimeout(() => {
+//             entry.target.classList.remove("reverse-sliding");
+//         },500)
+//     });
+// }))
 
 
-const hiddenElements = document.querySelectorAll(".hidden");
-const slide = document.querySelectorAll(".slide");
-const revSlide = document.querySelectorAll(".rev-slide");
+// const hiddenElements = document.querySelectorAll(".hidden");
+// const slide = document.querySelectorAll(".slide");
+// const revSlide = document.querySelectorAll(".rev-slide");
 
-hiddenElements.forEach(element => {
-    observer.observe(element);
-});
+// hiddenElements.forEach(element => {
+//     observer.observe(element);
+// });
 
-slide.forEach(element => {
-    observer2.observe(element);
-});
+// slide.forEach(element => {
+//     observer2.observe(element);
+// });
 
-revSlide.forEach(element => {
-    observer3.observe(element);
-});
+// revSlide.forEach(element => {
+//     observer3.observe(element);
+// });
 
